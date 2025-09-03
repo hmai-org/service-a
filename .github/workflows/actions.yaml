@@ -1,0 +1,16 @@
+name: CI with AWS CodeBuild
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_test:
+    runs-on: hmai-org-codebuild-services-runners-${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run tests
+        run: printenv && whoami
