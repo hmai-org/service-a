@@ -1,6 +1,7 @@
 name: CI with AWS CodeBuild
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
