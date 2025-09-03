@@ -7,7 +7,7 @@ on:
 
 jobs:
   build_and_test:
-    runs-on: hmai-org-codebuild-services-runners-${{ github.run_id }}-${{ github.run_attempt }}
+    runs-on: codebuild-hmai-org-codebuild-services-runners-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
